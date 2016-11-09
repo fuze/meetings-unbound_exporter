@@ -252,6 +252,6 @@ func main() {
 			</html>`))
 	})
 
-	log.Infoln("Listening ln", *listenAddress)
+	log.Infoln("Listening on", *listenAddress)
 	log.Fatal(http.ListenAndServe(*listenAddress, nil))
 }
