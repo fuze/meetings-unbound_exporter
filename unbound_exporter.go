@@ -1207,7 +1207,7 @@ func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		msgCacheCount, prometheus.CounterValue,
+		msgCacheCount, prometheus.GaugeValue,
 		lookupMetric("msg.cache.count"),
 	)
 
