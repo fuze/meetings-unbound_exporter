@@ -817,27 +817,27 @@ func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		memTotalSbrk, prometheus.CounterValue,
+		memTotalSbrk, prometheus.GaugeValue,
 		lookupMetric("mem.total.sbrk"),
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		memCacheRrset, prometheus.CounterValue,
+		memCacheRrset, prometheus.GaugeValue,
 		lookupMetric("mem.cache.rrset"),
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		memCacheMessage, prometheus.CounterValue,
+		memCacheMessage, prometheus.GaugeValue,
 		lookupMetric("mem.cache.message"),
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		memModIterator, prometheus.CounterValue,
+		memModIterator, prometheus.GaugeValue,
 		lookupMetric("mem.mod.iterator"),
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		memModValidator, prometheus.CounterValue,
+		memModValidator, prometheus.GaugeValue,
 		lookupMetric("mem.mod.validator"),
 	)
 
@@ -1212,17 +1212,17 @@ func (e *Exporter) Collect(ch chan<- prometheus.Metric) {
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		rrsetCacheCount, prometheus.CounterValue,
+		rrsetCacheCount, prometheus.GaugeValue,
 		lookupMetric("rrset.cache.count"),
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		infraCacheCount, prometheus.CounterValue,
+		infraCacheCount, prometheus.GaugeValue,
 		lookupMetric("infra.cache.count"),
 	)
 
 	ch <- prometheus.MustNewConstMetric(
-		keyCacheCount, prometheus.CounterValue,
+		keyCacheCount, prometheus.GaugeValue,
 		lookupMetric("key.cache.count"),
 	)
 }
