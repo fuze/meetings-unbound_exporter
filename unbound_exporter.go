@@ -1,21 +1,21 @@
 package main
 
 import (
-	"bytes"
-	"errors"
-	"flag"
-	"fmt"
-	"github.com/prometheus/client_golang/prometheus"
+  "bytes"
+  "errors"
+  "flag"
+  "fmt"
+  "github.com/prometheus/client_golang/prometheus"
   "github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/prometheus/common/log"
-	"github.com/prometheus/common/version"
+  "github.com/prometheus/common/log"
+  "github.com/prometheus/common/version"
   "net"
   "net/url"
-	"net/http"
-	"os"
-	"os/exec"
-	"strconv"
-	"strings"
+  "net/http"
+  "os"
+  "os/exec"
+  "strconv"
+  "strings"
 )
 
 const (
