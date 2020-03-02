@@ -1,0 +1,12 @@
+[Unit]
+Description=unbound_exporter for Prometheus metrics
+Wants=network-online.target
+After=network-online.target
+[Service]
+User=root
+ExecStart=/usr/local/bin/unbound_exporter -web.listen-address 9107
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=default.target
