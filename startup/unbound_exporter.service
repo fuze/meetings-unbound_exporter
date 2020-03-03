@@ -1,5 +1,5 @@
 [Unit]
-Description=unbound_exporter for Prometheus metrics
+Description=Fuze Build for unbound_exporter for Prometheus metrics
 Wants=network-online.target
 After=network-online.target
 [Service]
